@@ -1,0 +1,24 @@
+"use client";
+import {useState} from "react";
+import {motion} from "framer-motion";
+import {ArrowUpRight,Menu,X,Mail,ExternalLink,Code2,Sparkles,Layers3} from "lucide-react";
+
+const projects=[
+{n:"01",name:"HEPRA",type:"SAAS / WEBSITE BUILDER",desc:"Multi-tenant website platform for local businesses with templates, subscriptions, WhatsApp ordering and analytics.",tags:"Next.js · Node.js · MongoDB"},
+{n:"02",name:"HEPRA OPTICAL",type:"ECOMMERCE / SHOPIFY",desc:"Premium optical storefront with prescription-driven product configuration and conversion-focused UX.",tags:"Shopify · Liquid · UX/UI"},
+{n:"03",name:"DEBT FREEDOM AI",type:"FINTECH / AI",desc:"AI-powered debt planning dashboard with loan tracking, snowball and avalanche calculations.",tags:"Next.js · AI · Recharts"},
+{n:"04",name:"EASYSPECS",type:"OPTICAL SAAS",desc:"Concept for optical billing, prescription history, contact-lens workflows and invoice automation.",tags:"React · Node.js · MongoDB"}];
+const skills=["Next.js","React","TypeScript","Node.js","MongoDB","Shopify","Liquid","Tailwind CSS","Framer Motion","AI Automation","Product Design"];
+export default function Home(){
+ const[open,setOpen]=useState(false);
+ return <main>
+  <nav className="nav shell"><a href="#top" className="brand">RB<span>/DEV</span></a><div className={open?"links open":"links"}>{["About","Work","Services","Contact"].map(x=><a key={x} href={"#"+x.toLowerCase()} onClick={()=>setOpen(false)}>{x}</a>)}<a className="cta" href="#contact">Let's talk <ArrowUpRight size={15}/></a></div><button className="menu" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button></nav>
+  <section id="top" className="hero shell"><div><div className="eyebrow"><i/> AVAILABLE FOR SELECT PROJECTS</div><motion.h1 initial={{opacity:0,y:25}} animate={{opacity:1,y:0}}>I BUILD <span>DIGITAL</span><br/>PRODUCTS THAT<br/><span>MOVE FORWARD.</span></motion.h1><p>Full-stack developer & AI builder creating SaaS platforms, eCommerce experiences and automation systems.</p><div className="actions"><a className="primary" href="#work">Explore work <ArrowUpRight size={17}/></a><a href="#contact">Start a project</a></div></div><motion.div className="terminal" initial={{opacity:0,x:30}} animate={{opacity:1,x:0}}><div className="termbar"><b>● ● ●</b> rajaravikumar@dev — ~/portfolio</div><pre>{`$ whoami\nB Rajaravikumar\n\n$ role\nFULL-STACK DEVELOPER\nAI PRODUCT BUILDER\n\n$ stack\nNext.js · React · TypeScript\nNode.js · MongoDB · Shopify\n\n$ ./build --future\n✓ SYSTEM READY`}</pre></motion.div></section>
+  <div className="ticker">NEXT.JS ✦ AI ✦ SHOPIFY ✦ SAAS ✦ PRODUCT DESIGN ✦ AUTOMATION ✦</div>
+  <section id="about" className="section shell grid2"><div><small>01 / ABOUT</small><h2>From idea<br/><em>to interface.</em></h2></div><div><p className="lead">I turn business ideas into usable digital products — from the first screen to production deployment.</p><p>My work sits at the intersection of development, product thinking, eCommerce and AI. I care about clean architecture, sharp UX and shipping things that actually work.</p></div></section>
+  <section id="work" className="section shell"><div className="head"><div><small>02 / SELECTED WORK</small><h2>Things I've <em>built.</em></h2></div><span>04 PROJECTS</span></div><div className="projects">{projects.map((p,i)=><motion.article className="project" key={p.n} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.08}}><small>{p.n}</small><div><label>{p.type}</label><h3>{p.name}</h3><p>{p.desc}</p><code>{p.tags}</code></div><ArrowUpRight/></motion.article>)}</div></section>
+  <section id="services" className="section shell"><div className="head"><div><small>03 / CAPABILITIES</small><h2>What I <em>build.</em></h2></div></div><div className="services"><article><Code2/><h3>Full-Stack Development</h3><p>Modern web applications, APIs and production-ready architecture.</p></article><article><Sparkles/><h3>AI & Automation</h3><p>AI-powered workflows, agents and business automation systems.</p></article><article><Layers3/><h3>eCommerce & Shopify</h3><p>Conversion-focused storefronts, custom themes and commerce UX.</p></article></div></section>
+  <section className="section shell skills"><div><small>04 / TOOLBOX</small><h2>Built with<br/><em>the right tools.</em></h2></div><div className="skillgrid">{skills.map((s,i)=><span key={s}><b>0{i+1}</b>{s}</span>)}</div></section>
+  <section id="contact" className="contact shell"><div className="contactbox"><small>05 / CONTACT</small><h2>Have an idea?<br/><em>Let's build it.</em></h2><p>Tell me what you're working on and what you want to build.</p><a className="mail" href="mailto:hello@example.com"><Mail size={17}/> Start a conversation <ExternalLink size={14}/></a></div></section>
+  <footer className="shell footer"><span>© 2026 B Rajaravikumar</span><span>FULL-STACK · AI · PRODUCT</span></footer>
+ </main>}
