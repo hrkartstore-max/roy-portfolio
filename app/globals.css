@@ -95,3 +95,18 @@ body{background:radial-gradient(circle at 88% 8%,rgba(255,87,59,.06),transparent
 .case-close:focus-visible,.hamb:focus-visible,.footer-links a:focus-visible,.navlinks a:focus-visible,.orange-btn:focus-visible,.whatsapp-btn:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 .case-overlay{overscroll-behavior:contain}
 @media(max-width:760px){.footer-links{flex-wrap:wrap;gap:12px}.footer{align-items:flex-start}}
+
+/* V3.5 final UX polish */
+.hamb{display:none;border:1px solid var(--ink);background:transparent;width:40px;height:40px;place-items:center;color:var(--ink);cursor:pointer}
+.lead-form input:invalid:not(:placeholder-shown),.lead-form textarea:invalid:not(:placeholder-shown){border-color:var(--orange-deep)}
+.lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{box-shadow:0 0 0 2px rgba(255,87,59,.12)}
+.case-close:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+@media(max-width:760px){
+ .hamb{display:grid}
+ .navlinks{display:flex;visibility:hidden;opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .2s,transform .2s,visibility .2s}
+ .navlinks.open{display:flex;visibility:visible;opacity:1;transform:translateY(0);pointer-events:auto}
+ .navlinks .navcta{justify-content:center;margin-top:4px}
+}
+@media(prefers-reduced-motion:reduce){
+ .navlinks{transition:none}
+}
