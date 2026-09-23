@@ -163,11 +163,11 @@ body{background:radial-gradient(circle at 88% 8%,rgba(255,87,59,.06),transparent
 .hero-stat-card b{font-size:27px;letter-spacing:-.06em;color:var(--orange)}
 .hero-stat-card span{font:7px/1.35 "DM Mono",monospace;color:#666}
 .hepra-hero .hero-stats{display:none}
-@media(max-width:900px){.hepRA-hero{} .hepRA-hero{grid-template-columns:1fr}.hepRA-hero .hero-visual{min-height:390px}.hepRA-hero .hero-copy{max-width:760px}}
+@media(max-width:900px){.hepra-hero{} .hepra-hero{grid-template-columns:1fr}.hepra-hero .hero-visual{min-height:390px}.hepra-hero .hero-copy{max-width:760px}}
 @media(max-width:760px){
- .hepRA-hero{grid-template-columns:1fr;min-height:auto;padding:52px 0 46px;gap:34px}
- .hepRA-hero h1{font-size:52px}
- .hepRA-hero .hero-copy>p{font-size:14px}
+ .hepra-hero{grid-template-columns:1fr;min-height:auto;padding:52px 0 46px;gap:34px}
+ .hepra-hero h1{font-size:52px}
+ .hepra-hero .hero-copy>p{font-size:14px}
  .hero-benefits{display:grid;grid-template-columns:1fr;gap:9px;margin:19px 0 24px}
  .hero-visual{min-height:335px}
  .hero-visual:before{width:290px;height:290px;right:-20px;top:20px}
@@ -178,4 +178,4 @@ body{background:radial-gradient(circle at 88% 8%,rgba(255,87,59,.06),transparent
  .hero-note{font-size:7px}.note-one{left:-1px;top:58px}.note-two{right:4px;top:17px}
  .hero-stat-card{left:0;bottom:-3px;padding:9px 11px}.hero-stat-card b{font-size:21px}
 }
-@media(max-width:420px){.hepRA-hero h1{font-size:45px}.hero-visual{min-height:300px}.laptop{height:180px}.phone{width:82px;height:165px}}
+@media(max-width:420px){.hepra-hero h1{font-size:45px}.hero-visual{min-height:300px}.laptop{height:180px}.phone{width:82px;height:165px}}
