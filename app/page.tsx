@@ -72,7 +72,7 @@ Details: ${form.message}`);window.open("https://wa.me/918124262289?text="+text,"
    </div>
   </section>
 
-  <section className="marquee" aria-label="Skills ticker"><div>SAAS <i>✦</i> AI <i>✦</i> SHOPIFY <i>✦</i> WORDPRESS <i>✦</i> PHP <i>✦</i> PRODUCT DESIGN <i>✦</i> AUTOMATION <i>✦</i></div></section>
+  <section className="marquee" aria-label="Skills ticker"><div className="marquee-track"><span>SAAS <i>✦</i> AI <i>✦</i> SHOPIFY <i>✦</i> WORDPRESS <i>✦</i> PHP <i>✦</i> PRODUCT DESIGN <i>✦</i> AUTOMATION <i>✦</i></span><span aria-hidden="true">SAAS <i>✦</i> AI <i>✦</i> SHOPIFY <i>✦</i> WORDPRESS <i>✦</i> PHP <i>✦</i> PRODUCT DESIGN <i>✦</i> AUTOMATION <i>✦</i></span></div></section>
 
   <section id="work" className="section shell">
    <div className="section-head"><div><small>01 — SELECTED WORK</small><h2>BUILT TO<br/><em>BE USED.</em></h2></div><span>SCROLL / EXPLORE ↓</span></div>
