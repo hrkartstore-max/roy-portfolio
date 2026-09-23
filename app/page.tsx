@@ -1,6 +1,6 @@
 "use client";
 import {useEffect,useRef,useState} from "react";
-import {motion} from "framer-motion";
+import {motion,useReducedMotion} from "framer-motion";
 import {ArrowUpRight,Menu,X,Mail,Plus,MessageCircle,ShoppingBag,Globe,Code2} from "lucide-react";
 
 const projects=[
@@ -16,6 +16,7 @@ const services=[
 ];
 const process=[["01","DISCOVER","Understand the business, problem and users."],["02","DESIGN","Structure the experience and interface."],["03","BUILD","Develop the product with modern technology."],["04","SHIP","Deploy, test and improve."]];
 export default function Home(){
+ const reduceMotion=useReducedMotion();
  const[open,setOpen]=useState(false);
  const[active,setActive]=useState("work");
  const[scrollProgress,setScrollProgress]=useState(0);
@@ -41,7 +42,7 @@ Details: ${form.message}`);window.open("https://wa.me/918124262289?text="+text,"
   <section id="top" className="hero shell">
    <div className="hero-copy">
     <div className="stamp">BUILDING DIGITAL PRODUCTS <span>●</span></div>
-    <motion.h1 initial={{opacity:0,y:18}} animate={{opacity:1,y:0}}>THE DIGITAL<br/>PRODUCT <strong>BUILDER.</strong></motion.h1>
+    <motion.h1 initial={reduceMotion?false:{opacity:0,y:18}} animate={{opacity:1,y:0}} transition={reduceMotion?{duration:0}:{duration:.45}}>THE DIGITAL<br/>PRODUCT <strong>BUILDER.</strong></motion.h1>
     <p>Full-stack developer, AI builder and product thinker. Turning ideas into sharp interfaces, useful software and production-ready systems.</p>
     <div className="hero-bottom"><a className="orange-btn" href="#work">SEE THE WORK <ArrowUpRight size={15}/></a><span>CHENNAI · INDIA<br/>AVAILABLE FOR SELECT PROJECTS</span></div>
    </div>
@@ -56,7 +57,7 @@ Details: ${form.message}`);window.open("https://wa.me/918124262289?text="+text,"
 
   <section id="work" className="section shell">
    <div className="section-head"><div><small>01 — SELECTED WORK</small><h2>BUILT TO<br/><em>BE USED.</em></h2></div><span>SCROLL / EXPLORE ↓</span></div>
-   <div className="workgrid">{projects.map((p,i)=><motion.article className="workcard" key={p.n} role="button" tabIndex={0} onClick={()=>setSelected(p)} onKeyDown={e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();setSelected(p)}}} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.06}}>
+   <div className="workgrid">{projects.map((p,i)=><motion.article className="workcard" key={p.n} role="button" tabIndex={0} onClick={()=>setSelected(p)} onKeyDown={e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();setSelected(p)}}} initial={reduceMotion?false:{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={reduceMotion?{duration:0}:{delay:i*.06,duration:.45}}>
     <div className="cardtop"><span>{p.tag}</span><span>{p.n}</span></div><div className={"preview preview-"+p.n}><div className="previewbar"><i/><i/><i/></div><div className="mock-content"><div className="mock-nav"><b>{p.name}</b><span>MENU</span></div><div className="mock-hero"><small>{p.tag}</small><strong>{p.n==="01"?"BUILD":p.n==="02"?"SEE CLEARER":p.n==="03"?"DEBT, SIMPLIFIED":"OPTICAL FLOW"}</strong><i></i></div><div className="mock-cards"><span></span><span></span><span></span></div></div><ArrowUpRight className="cardarrow"/></div><h3>{p.name}</h3><p>{p.desc}</p><code>{p.meta}</code>
    </motion.article>)}</div>
   </section>
@@ -81,9 +82,9 @@ Details: ${form.message}`);window.open("https://wa.me/918124262289?text="+text,"
 
   <section className="section shell availability"><div className="availability-card"><div><span className="status-dot"></span><small>PROJECT STATUS</small><h2>AVAILABLE FOR<br/><em>SELECT PROJECTS.</em></h2><p>Currently open for Shopify, WordPress, PHP, SaaS and AI/automation projects.</p></div><a className="orange-btn" href="#contact">START A PROJECT <ArrowUpRight size={15}/></a></div></section>
 
-  <section className="section shell toolbox"><div><small>06 — TOOLBOX</small><h2>TOOLS<br/><em>I USE.</em></h2></div><div className="toollist">{skills.map((s,i)=><span key={s}><b>{String(i+1).padStart(2,"0")}</b>{s}</span>)}</div></section>
+  <section className="section shell toolbox"><div><small>07 — TOOLBOX</small><h2>TOOLS<br/><em>I USE.</em></h2></div><div className="toollist">{skills.map((s,i)=><span key={s}><b>{String(i+1).padStart(2,"0")}</b>{s}</span>)}</div></section>
 
-  <section id="contact" className="contact shell"><div className="contact-inner"><div className="contact-copy"><small>07 — CONTACT</small><h2>HAVE A<br/>GOOD <em>IDEA?</em></h2><p>Let's turn it into something people can actually use.</p><div className="contact-actions"><a href="mailto:rajaravikumarb@gmail.com" className="orange-btn">EMAIL ME <Mail size={14}/></a><a href="https://wa.me/918124262289" target="_blank" rel="noreferrer" className="whatsapp-btn"><MessageCircle size={15}/> WHATSAPP CHAT</a></div></div><form className="lead-form" onSubmit={sendWhatsApp}><div className="form-title">START A PROJECT</div><label>NAME<input required minLength={2} value={form.name} onChange={e=>setForm({...form,name:e.target.value})} placeholder="Your name"/></label><label>BUSINESS<input required minLength={2} value={form.business} onChange={e=>setForm({...form,business:e.target.value})} placeholder="Business / brand"/></label><div className="form-row"><label>TYPE<select value={form.type} onChange={e=>setForm({...form,type:e.target.value})}><option>Shopify</option><option>WordPress</option><option>PHP</option><option>Custom SaaS / AI</option></select></label><label>BUDGET<select value={form.budget} onChange={e=>setForm({...form,budget:e.target.value})}><option>₹2,999+</option><option>₹5,999+</option><option>₹10,000+</option><option>₹20,000+</option><option>Custom</option></select></label></div><label>PROJECT DETAILS<textarea required minLength={10} rows={4} value={form.message} onChange={e=>setForm({...form,message:e.target.value})} placeholder="What needs to be built?"></textarea></label><button className="orange-btn" type="submit">{submitted?"OPENED WHATSAPP ✓":"SEND TO WHATSAPP"} {!submitted&&<ArrowUpRight size={15}/>}</button></form></div></section>
+  <section id="contact" className="contact shell"><div className="contact-inner"><div className="contact-copy"><small>08 — CONTACT</small><h2>HAVE A<br/>GOOD <em>IDEA?</em></h2><p>Let's turn it into something people can actually use.</p><div className="contact-actions"><a href="mailto:rajaravikumarb@gmail.com" className="orange-btn">EMAIL ME <Mail size={14}/></a><a href="https://wa.me/918124262289" target="_blank" rel="noreferrer" className="whatsapp-btn"><MessageCircle size={15}/> WHATSAPP CHAT</a></div></div><form className="lead-form" onSubmit={sendWhatsApp}><div className="form-title">START A PROJECT</div><label>NAME<input required minLength={2} value={form.name} onChange={e=>setForm({...form,name:e.target.value})} placeholder="Your name"/></label><label>BUSINESS<input required minLength={2} value={form.business} onChange={e=>setForm({...form,business:e.target.value})} placeholder="Business / brand"/></label><div className="form-row"><label>TYPE<select value={form.type} onChange={e=>setForm({...form,type:e.target.value})}><option>Shopify</option><option>WordPress</option><option>PHP</option><option>Custom SaaS / AI</option></select></label><label>BUDGET<select value={form.budget} onChange={e=>setForm({...form,budget:e.target.value})}><option>₹2,999+</option><option>₹5,999+</option><option>₹10,000+</option><option>₹20,000+</option><option>Custom</option></select></label></div><label>PROJECT DETAILS<textarea required minLength={10} rows={4} value={form.message} onChange={e=>setForm({...form,message:e.target.value})} placeholder="What needs to be built?"></textarea></label><button className="orange-btn" type="submit">{submitted?"OPENED WHATSAPP ✓":"SEND TO WHATSAPP"} {!submitted&&<ArrowUpRight size={15}/>}</button></form></div></section>
   <section className="final-cta shell"><div><small>LET’S BUILD SOMETHING USEFUL.</small><h2>YOUR IDEA.<br/><em>SHIPPED.</em></h2></div><a className="orange-btn" href="#contact">START A PROJECT <ArrowUpRight size={15}/></a></section>
   <footer className="footer shell"><span>© 2026 B RAJARAVIKUMAR</span><div className="footer-links"><a href="mailto:rajaravikumarb@gmail.com">EMAIL</a><a href="https://wa.me/918124262289" target="_blank" rel="noreferrer">WHATSAPP</a><a href="https://github.com/hrkartstore-max/roy-portfolio" target="_blank" rel="noreferrer">GITHUB</a><a href="#top">BACK TO TOP ↑</a></div></footer>
 
