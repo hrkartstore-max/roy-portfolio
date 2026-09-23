@@ -282,3 +282,13 @@ body{background:radial-gradient(circle at 88% 8%,rgba(255,87,59,.06),transparent
  .about-upgrade .facts{grid-template-columns:1fr}
 }
 @media(max-width:420px){.about-heading h2{font-size:47px}.aboutcopy .big{font-size:24px}.about-metrics b{font-size:22px}}
+
+
+/* V4.1 — conversational ABOUT story */
+.about-story{border-left:2px solid var(--orange);padding:2px 0 2px 18px;margin:24px 0 27px;max-width:650px}
+.about-story p{font-size:13px;line-height:1.75;color:#60655f;margin:0 0 13px}
+.about-story p:last-child{margin-bottom:0}
+.about-story p:first-child{font-size:15px;line-height:1.5;color:var(--ink)}
+.about-story b{font-weight:600}
+.about-story strong{color:var(--ink);font-weight:600}
+@media(max-width:760px){.about-story{padding-left:14px;margin:20px 0 24px}.about-story p{font-size:12px;line-height:1.7}.about-story p:first-child{font-size:14px}}
