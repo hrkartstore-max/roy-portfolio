@@ -1,6 +1,5 @@
 "use client";
 import {useEffect,useRef,useState} from "react";
-import {motion,useReducedMotion} from "framer-motion";
 import {ArrowUpRight,Menu,X,Mail,Plus,MessageCircle,ShoppingBag,Globe,Code2} from "lucide-react";
 
 const projects=[
@@ -8,7 +7,7 @@ const projects=[
  {n:"02",tag:"ECOMMERCE / SHOPIFY",name:"HEPRA OPTICAL",desc:"A premium optical commerce experience with prescription-led product configuration and a Lenskart-inspired order flow.",meta:"SHOPIFY · LIQUID · UX/UI",stack:["Shopify OS 2.0","Liquid","UX/UI","Optical Configurator"],problem:"Optical products need more than a standard add-to-cart flow because lens, prescription and fitting choices change the purchase journey.",solution:"A Shopify OS 2.0 storefront with category-led discovery and a guided configuration flow for frames, lenses and prescriptions.",features:["Custom Shopify storefront","Optical configurator","Prescription / PD flow","Contact lens purchase flow","Mobile-first product UX"],result:"A commerce architecture focused on reducing friction between product discovery and prescription-aware checkout."},
  {n:"03",tag:"FINTECH / AI",name:"DEBT FREEDOM AI",desc:"An AI-powered debt planning workspace for tracking loans and exploring repayment strategies.",meta:"NEXT.JS · AI · RECHARTS",stack:["Next.js","TypeScript","AI","Recharts"],problem:"Managing multiple loans, balances and repayment timelines can become difficult to understand at a glance.",solution:"A dashboard concept that organizes loans, repayment strategies, progress and financial insights in one workspace.",features:["Loan tracking","Snowball vs avalanche comparison","Finance dashboard","Progress visualizations","AI-assisted planning"],result:"A focused product concept for turning a complex debt picture into an understandable planning workflow."},
  {n:"04",tag:"OPTICAL SAAS",name:"EASYSPECS",desc:"Optical billing and prescription workflow concept for stores, contact lenses and invoice automation.",meta:"REACT · NODE · MONGODB",stack:["React","Node.js","MongoDB","Optical SaaS"],problem:"Optical stores often need prescription data, lens pricing and billing to work together instead of being handled separately.",solution:"A custom optical workflow concept connecting prescription capture, product logic and invoice generation.",features:["Prescription form","Rx history","Lens pricing logic","Contact lens workflow","Invoice generation"],result:"A foundation for a store-facing optical operations tool that can grow into a full SaaS product."}];
-const skills=["Next.js","React","TypeScript","Node.js","MongoDB","Shopify","Liquid","Tailwind CSS","Framer Motion","AI Automation","Product Design","Figma"];
+const skills=["Next.js","React","TypeScript","Node.js","MongoDB","Shopify","Liquid","Tailwind CSS","Motion UI","AI Automation","Product Design","Figma"];
 const services=[
  ["01","SHOPIFY DEVELOPMENT","Build a complete Shopify store with a custom storefront, product pages, collections, cart, responsive design and conversion-focused shopping experience.","SHOPIFY · LIQUID"],
  ["02","WORDPRESS DEVELOPMENT","Build a professional WordPress website for businesses, services, portfolios, blogs or local brands with responsive design and easy content management.","WORDPRESS · PHP"],
@@ -16,7 +15,6 @@ const services=[
 ];
 const process=[["01","DISCOVER","Understand the business, problem and users."],["02","DESIGN","Structure the experience and interface."],["03","BUILD","Develop the product with modern technology."],["04","SHIP","Deploy, test and improve."]];
 export default function Home(){
- const reduceMotion=useReducedMotion();
  const[open,setOpen]=useState(false);
  const[active,setActive]=useState("work");
  const[scrollProgress,setScrollProgress]=useState(0);
@@ -42,7 +40,7 @@ Details: ${form.message}`);window.open("https://wa.me/918124262289?text="+text,"
   <section id="top" className="hero shell">
    <div className="hero-copy">
     <div className="stamp">BUILDING DIGITAL PRODUCTS <span>●</span></div>
-    <motion.h1 initial={reduceMotion?false:{opacity:0,y:18}} animate={{opacity:1,y:0}} transition={reduceMotion?{duration:0}:{duration:.45}}>THE DIGITAL<br/>PRODUCT <strong>BUILDER.</strong></motion.h1>
+    <h1>THE DIGITAL<br/>PRODUCT <strong>BUILDER.</strong></h1>
     <p>Full-stack developer, AI builder and product thinker. Turning ideas into sharp interfaces, useful software and production-ready systems.</p>
     <div className="hero-bottom"><a className="orange-btn" href="#work">SEE THE WORK <ArrowUpRight size={15}/></a><span>CHENNAI · INDIA<br/>AVAILABLE FOR SELECT PROJECTS</span></div>
    </div>
@@ -59,7 +57,7 @@ Details: ${form.message}`);window.open("https://wa.me/918124262289?text="+text,"
    <div className="section-head"><div><small>01 — SELECTED WORK</small><h2>BUILT TO<br/><em>BE USED.</em></h2></div><span>SCROLL / EXPLORE ↓</span></div>
    <div className="workgrid">{projects.map((p,i)=><motion.article className="workcard" key={p.n} role="button" tabIndex={0} onClick={()=>setSelected(p)} onKeyDown={e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();setSelected(p)}}} initial={reduceMotion?false:{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={reduceMotion?{duration:0}:{delay:i*.06,duration:.45}}>
     <div className="cardtop"><span>{p.tag}</span><span>{p.n}</span></div><div className={"preview preview-"+p.n}><div className="previewbar"><i/><i/><i/></div><div className="mock-content"><div className="mock-nav"><b>{p.name}</b><span>MENU</span></div><div className="mock-hero"><small>{p.tag}</small><strong>{p.n==="01"?"BUILD":p.n==="02"?"SEE CLEARER":p.n==="03"?"DEBT, SIMPLIFIED":"OPTICAL FLOW"}</strong><i></i></div><div className="mock-cards"><span></span><span></span><span></span></div></div><ArrowUpRight className="cardarrow"/></div><h3>{p.name}</h3><p>{p.desc}</p><code>{p.meta}</code>
-   </motion.article>)}</div>
+   </article>)}</div>
   </section>
 
   <section id="pricing" className="section shell pricing"><div className="section-head"><div><small>02 — WEBSITE PRICING</small><h2>SIMPLE<br/><em>PRICING.</em></h2></div><span>ONE-TIME BUILD</span></div>
