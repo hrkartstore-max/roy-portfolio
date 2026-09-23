@@ -21,8 +21,17 @@ export default function Home(){
   <header className="topbar shell"><a href="#top" className="wordmark">RB<span>· DIGITAL</span></a><nav className={open?"navlinks open":"navlinks"}>{["Work","Pricing","About","Services","Process","Contact"].map(x=><a key={x} href={"#"+x.toLowerCase()} onClick={()=>setOpen(false)}>{x}</a>)}<a className="navcta" href="#contact">START A PROJECT <ArrowUpRight size={13}/></a></nav><button className="hamb" aria-label="Toggle menu" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button></header>
 
   <section id="top" className="hero shell">
-   <div className="hero-copy"><div className="stamp">BUILDING DIGITAL PRODUCTS <span>●</span></div><motion.h1 initial={{opacity:0,y:18}} animate={{opacity:1,y:0}}>THE DIGITAL<br/>PRODUCT <strong>BUILDER.</strong></motion.h1><p>Full-stack developer, AI builder and product thinker. Turning ideas into sharp interfaces, useful software and production-ready systems.</p><div className="hero-bottom"><a className="orange-btn" href="#work">SEE THE WORK <ArrowUpRight size={15}/></a><span>CHENNAI · INDIA<br/>AVAILABLE FOR SELECT PROJECTS</span></div></div>
-   <div className="hero-visual"><div className="hero-orbit"><div className="orbit-core">RB</div><div className="orbit-ring orbit-ring-a"></div><div className="orbit-ring orbit-ring-b"></div><span className="orbit-label orbit-label-1">IDEAS</span><span className="orbit-label orbit-label-2">BUILD</span><span className="orbit-label orbit-label-3">SHIP</span></div><div className="hero-stats"><div><b>372+</b><span>PROJECTS<br/>COMPLETED</span></div><div><b>12+</b><span>TOOLS &<br/>FRAMEWORKS</span></div><div><b>∞</b><span>IDEAS<br/>TO SHIP</span></div></div></div></div>
+   <div className="hero-copy">
+    <div className="stamp">BUILDING DIGITAL PRODUCTS <span>●</span></div>
+    <motion.h1 initial={{opacity:0,y:18}} animate={{opacity:1,y:0}}>THE DIGITAL<br/>PRODUCT <strong>BUILDER.</strong></motion.h1>
+    <p>Full-stack developer, AI builder and product thinker. Turning ideas into sharp interfaces, useful software and production-ready systems.</p>
+    <div className="hero-bottom"><a className="orange-btn" href="#work">SEE THE WORK <ArrowUpRight size={15}/></a><span>CHENNAI · INDIA<br/>AVAILABLE FOR SELECT PROJECTS</span></div>
+   </div>
+   <div className="hero-stats">
+    <div><b>372+</b><span>PROJECTS<br/>COMPLETED</span></div>
+    <div><b>12+</b><span>TOOLS &<br/>FRAMEWORKS</span></div>
+    <div><b>∞</b><span>IDEAS<br/>TO SHIP</span></div>
+   </div>
   </section>
 
   <section className="marquee" aria-label="Skills ticker"><div>SAAS <i>✦</i> AI <i>✦</i> SHOPIFY <i>✦</i> WORDPRESS <i>✦</i> PHP <i>✦</i> PRODUCT DESIGN <i>✦</i> AUTOMATION <i>✦</i></div></section>
