@@ -90,7 +90,29 @@ Details: ${form.message}`);window.open("https://wa.me/918124262289?text="+text,"
    <div className="price-note">DOMAIN COSTS ARE PAID SEPARATELY BY THE CUSTOMER. THIRD-PARTY PLATFORM/HOSTING SUBSCRIPTIONS ARE ALSO SEPARATE WHERE APPLICABLE.</div>
   </section>
 
-  <section id="about" className="section shell about"><div><small>03 — ABOUT</small><h2>LESS<br/><em>NOISE.</em><br/>MORE<br/>BUILDING.</h2></div><div className="aboutcopy"><p className="big">The goal is simple: make digital products feel clear, useful and considered.</p><p>Development, product design, eCommerce and AI come together here. From a rough business idea to a polished interface and a deployable application, the focus stays on shipping.</p><div className="facts"><span><b>01</b> Product thinking</span><span><b>02</b> Full-stack execution</span><span><b>03</b> AI + automation</span><span><b>04</b> eCommerce UX</span></div></div></section>
+  <section id="about" className="section shell about about-upgrade">
+   <div className="about-heading">
+    <small>03 — ABOUT THE BUILDER</small>
+    <h2>LESS<br/><em>NOISE.</em><br/>MORE<br/><span>BUILDING.</span></h2>
+    <div className="about-signature">RB · DIGITAL / CHENNAI, INDIA</div>
+   </div>
+   <div className="aboutcopy">
+    <div className="about-kicker"><span>01</span><b>PRODUCT · DESIGN · CODE</b></div>
+    <p className="big">Ideas are easy. <em>Shipping something useful</em> is the real work.</p>
+    <p>Digital products are built from business problems first — then shaped into clear interfaces, practical workflows and production-ready software. From Shopify stores to SaaS, AI and automation, the focus stays on making technology useful.</p>
+    <div className="about-metrics">
+      <div><b>372+</b><span>PROJECTS<br/>COMPLETED</span></div>
+      <div><b>12+</b><span>TOOLS &amp;<br/>FRAMEWORKS</span></div>
+      <div><b>∞</b><span>IDEAS<br/>TO SHIP</span></div>
+    </div>
+    <div className="facts">
+      <span><b>01</b> Product thinking <i>↗</i></span>
+      <span><b>02</b> Full-stack execution <i>↗</i></span>
+      <span><b>03</b> AI + automation <i>↗</i></span>
+      <span><b>04</b> eCommerce UX <i>↗</i></span>
+    </div>
+   </div>
+  </section>
 
   <section id="services" className="section shell"><div className="section-head"><div><small>04 — WHAT CAN BE BUILT?</small><h2>WHAT CAN<br/><em>BE BUILT?</em></h2></div></div><div className="servicegrid">{services.map(([n,t,d,m])=><article key={n}><b>{n}</b><h3>{t}</h3><p>{d}</p><code>{m}</code><Plus className="serviceplus" size={18}/></article>)}</div></section>
 
