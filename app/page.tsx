@@ -37,17 +37,38 @@ Details: ${form.message}`);window.open("https://wa.me/918124262289?text="+text,"
  return <main>
   <div className="scroll-progress" style={{width:`${scrollProgress}%`}}/><header className="topbar shell"><a href="#top" className="wordmark">RB<span>· DIGITAL</span></a><nav className={open?"navlinks open":"navlinks"}>{["Work","Pricing","About","Services","Process","Why","Contact"].map(x=>{const id=x.toLowerCase();return <a className={active===id?"active":""} key={x} href={"#"+id} onClick={()=>setOpen(false)}>{x}</a>})}<a className="navcta" href="#contact">START A PROJECT <ArrowUpRight size={13}/></a></nav><button className="hamb" aria-label={open?"Close menu":"Open menu"} aria-expanded={open} onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button></header>
 
-  <section id="top" className="hero shell">
+  <section id="top" className="hero shell hepra-hero">
    <div className="hero-copy">
-    <div className="stamp">BUILDING DIGITAL PRODUCTS <span>●</span></div>
-    <h1>THE DIGITAL<br/>PRODUCT <strong>BUILDER.</strong></h1>
-    <p>Full-stack developer, AI builder and product thinker. Turning ideas into sharp interfaces, useful software and production-ready systems.</p>
-    <div className="hero-bottom"><a className="orange-btn" href="#work">SEE THE WORK <ArrowUpRight size={15}/></a><span>CHENNAI · INDIA<br/>AVAILABLE FOR SELECT PROJECTS</span></div>
+    <div className="stamp">YOUR BUSINESS. YOUR STORE. YOUR ORDERS. <span>●</span></div>
+    <h1>Stop Selling<br/>Through <strong>DMs.</strong><br/><span>Start Selling Online.</span></h1>
+    <p>Turn your existing business into a professional online store with products, payments, orders and mobile shopping — without the technical headache.</p>
+    <div className="hero-benefits">
+      <span>✓ Your own online store</span>
+      <span>✓ Accept online payments</span>
+      <span>✓ Manage products &amp; orders</span>
+    </div>
+    <div className="hero-bottom">
+      <a className="orange-btn" href="#contact">🚀 LAUNCH MY ONLINE STORE <ArrowUpRight size={15}/></a>
+      <a className="hero-secondary" href="#work">SEE HOW IT WORKS <ArrowUpRight size={14}/></a>
+    </div>
+    <div className="hero-trust">Free 10-min consultation <i>•</i> Built for Indian businesses</div>
    </div>
-   <div className="hero-stats">
-    <div><b>372+</b><span>PROJECTS<br/>COMPLETED</span></div>
-    <div><b>12+</b><span>TOOLS &<br/>FRAMEWORKS</span></div>
-    <div><b>∞</b><span>IDEAS<br/>TO SHIP</span></div>
+   <div className="hero-visual" aria-label="HEPRA online store preview">
+     <div className="hero-note note-one">SELL ONLINE</div>
+     <div className="hero-note note-two">ORDERS →</div>
+     <div className="store-device laptop">
+       <div className="device-top"><i/><i/><i/></div>
+       <div className="store-screen">
+         <div className="store-nav"><b>HEPRA</b><span>SHOP&nbsp;&nbsp; CATEGORIES&nbsp;&nbsp; CONTACT</span><strong>🛒</strong></div>
+         <div className="store-hero-copy"><small>YOUR ONLINE STORE</small><b>Everything your<br/>customers need.</b><span>SHOP NOW →</span></div>
+         <div className="store-products"><i/><i/><i/></div>
+       </div>
+     </div>
+     <div className="store-device phone">
+       <div className="phone-notch"/>
+       <div className="phone-screen"><b>HEPRA</b><small>NEW COLLECTION</small><strong>SHOP<br/>ONLINE.</strong><span>EXPLORE →</span><div className="phone-card"/></div>
+     </div>
+     <div className="hero-stat-card"><b>24/7</b><span>YOUR STORE<br/>IS OPEN</span></div>
    </div>
   </section>
 
