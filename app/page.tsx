@@ -99,7 +99,12 @@ Details: ${form.message}`);window.open("https://wa.me/918124262289?text="+text,"
    <div className="aboutcopy">
     <div className="about-kicker"><span>01</span><b>PRODUCT · DESIGN · CODE</b></div>
     <p className="big">Ideas are easy. <em>Shipping something useful</em> is the real work.</p>
-    <p>Digital products are built from business problems first — then shaped into clear interfaces, practical workflows and production-ready software. From Shopify stores to SaaS, AI and automation, the focus stays on making technology useful.</p>
+    <p>I work at the intersection of business, design and technology. The goal isn't to make a website that simply looks good — it's to build something that helps a real business sell, operate, communicate or grow.</p>
+    <div className="about-story">
+      <p><b>What happens when a business has a good idea but no digital system?</b></p>
+      <p>That is where the work starts. A rough idea becomes a clear structure. A confusing customer journey becomes a simple experience. Manual work becomes a workflow. And a business that depends on DMs, spreadsheets or disconnected tools can move toward a system that actually works.</p>
+      <p>From Shopify stores and optical commerce to SaaS products, AI tools and automation, every project is approached with the same mindset: <strong>understand the problem → design the experience → build the system → ship it.</strong></p>
+    </div>
     <div className="about-metrics">
       <div><b>372+</b><span>PROJECTS<br/>COMPLETED</span></div>
       <div><b>12+</b><span>TOOLS &amp;<br/>FRAMEWORKS</span></div>
