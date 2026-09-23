@@ -55,7 +55,7 @@ Details: ${form.message}`);window.open("https://wa.me/918124262289?text="+text,"
 
   <section id="work" className="section shell">
    <div className="section-head"><div><small>01 — SELECTED WORK</small><h2>BUILT TO<br/><em>BE USED.</em></h2></div><span>SCROLL / EXPLORE ↓</span></div>
-   <div className="workgrid">{projects.map((p,i)=><motion.article className="workcard" key={p.n} role="button" tabIndex={0} onClick={()=>setSelected(p)} onKeyDown={e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();setSelected(p)}}} initial={reduceMotion?false:{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={reduceMotion?{duration:0}:{delay:i*.06,duration:.45}}>
+   <div className="workgrid">{projects.map((p,i)=><article className="workcard" key={p.n} role="button" tabIndex={0} onClick={()=>setSelected(p)} onKeyDown={e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();setSelected(p)}}}>
     <div className="cardtop"><span>{p.tag}</span><span>{p.n}</span></div><div className={"preview preview-"+p.n}><div className="previewbar"><i/><i/><i/></div><div className="mock-content"><div className="mock-nav"><b>{p.name}</b><span>MENU</span></div><div className="mock-hero"><small>{p.tag}</small><strong>{p.n==="01"?"BUILD":p.n==="02"?"SEE CLEARER":p.n==="03"?"DEBT, SIMPLIFIED":"OPTICAL FLOW"}</strong><i></i></div><div className="mock-cards"><span></span><span></span><span></span></div></div><ArrowUpRight className="cardarrow"/></div><h3>{p.name}</h3><p>{p.desc}</p><code>{p.meta}</code>
    </article>)}</div>
   </section>
