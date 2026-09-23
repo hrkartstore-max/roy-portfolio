@@ -179,3 +179,53 @@ body{background:radial-gradient(circle at 88% 8%,rgba(255,87,59,.06),transparent
  .hero-stat-card{left:0;bottom:-3px;padding:9px 11px}.hero-stat-card b{font-size:21px}
 }
 @media(max-width:420px){.hepra-hero h1{font-size:45px}.hero-visual{min-height:300px}.laptop{height:180px}.phone{width:82px;height:165px}}
+
+
+/* HEPRA HERO MOBILE OVERLAP FIX */
+.hepra-hero .hero-visual{isolation:isolate}
+.laptop{padding:11px 11px 15px;display:flex;flex-direction:column}
+.laptop .device-top{flex:0 0 11px}
+.laptop .store-screen{flex:1;min-height:0;height:auto}
+.store-nav{min-height:28px}
+.store-hero-copy{padding:24px 22px 12px}
+.store-products i{height:58px}
+@media(max-width:760px){
+  .hepra-hero{grid-template-columns:1fr}
+  .hepra-hero .hero-visual{display:block}
+  .hepra-hero .hero-copy{position:relative;z-index:10}
+  .hepra-hero .hero-bottom{position:relative;z-index:12}
+  .hepra-hero .hero-trust{position:relative;z-index:12}
+  .hepra-hero .hero-visual{min-height:300px;margin-top:4px}
+  .hepra-hero .hero-visual:before{right:50%;transform:translateX(50%);top:12px;width:275px;height:275px}
+  .hepra-hero .laptop{width:calc(100% - 42px);height:190px;right:21px;top:34px;padding:8px 8px 12px}
+  .hepra-hero .device-top{height:8px;flex-basis:8px;margin-bottom:5px}
+  .hepra-hero .device-top i{width:4px;height:4px}
+  .hepra-hero .store-nav{height:22px;min-height:22px;padding:0 8px;font-size:5px}
+  .hepra-hero .store-nav b{font-size:7px}
+  .hepra-hero .store-nav span{display:none}
+  .hepra-hero .store-hero-copy{padding:15px 14px 8px}
+  .hepra-hero .store-hero-copy small{font-size:5px}
+  .hepra-hero .store-hero-copy b{font-size:18px;line-height:.92;margin:6px 0 8px}
+  .hepra-hero .store-hero-copy span{font-size:5px;padding:5px 7px}
+  .hepra-hero .store-products{padding:0 14px;gap:5px}
+  .hepra-hero .store-products i{height:38px}
+  .hepra-hero .phone{width:82px;height:165px;right:4px;bottom:0;padding:6px}
+  .hepra-hero .phone-screen{padding:23px 8px 8px}
+  .hepra-hero .phone-screen>b{font-size:6px}
+  .hepra-hero .phone-screen small{margin-top:12px;font-size:4px}
+  .hepra-hero .phone-screen strong{font-size:17px}
+  .hepra-hero .phone-screen>span{font-size:4px;padding:4px 5px}
+  .hepra-hero .phone-card{height:34px}
+  .hepra-hero .hero-note{font-size:6px;padding:5px 7px}
+  .hepra-hero .note-one{left:2px;top:48px}
+  .hepra-hero .note-two{right:3px;top:15px}
+  .hepra-hero .hero-stat-card{left:3px;bottom:-2px;padding:8px 10px}
+  .hepra-hero .hero-stat-card b{font-size:18px}
+  .hepra-hero .hero-stat-card span{font-size:6px}
+}
+@media(max-width:420px){
+  .hepra-hero .hero-visual{min-height:275px}
+  .hepra-hero .laptop{width:calc(100% - 30px);right:15px;height:168px;top:35px}
+  .hepra-hero .store-hero-copy b{font-size:16px}
+  .hepra-hero .phone{width:72px;height:145px}
+}
