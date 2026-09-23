@@ -51,7 +51,7 @@ export default function Home(){
 
   <section className="section shell toolbox"><div><small>06 — TOOLBOX</small><h2>TOOLS<br/><em>I USE.</em></h2></div><div className="toollist">{skills.map((s,i)=><span key={s}><b>{String(i+1).padStart(2,"0")}</b>{s}</span>)}</div></section>
 
-  <section id="contact" className="contact shell"><div className="contact-inner"><small>07 — CONTACT</small><h2>HAVE A<br/>GOOD <em>IDEA?</em></h2><p>Let's turn it into something people can actually use.</p><div className="contact-actions"><a href="mailto:hello@example.com" className="orange-btn">EMAIL ME <Mail size={14}/></a><a href="https://wa.me/" target="_blank" rel="noreferrer" className="whatsapp-btn"><MessageCircle size={15}/> WHATSAPP CHAT</a></div><small className="whatsapp-note">WhatsApp number can be connected here once the business number is added.</small></div></section>
+  <section id="contact" className="contact shell"><div className="contact-inner"><small>07 — CONTACT</small><h2>HAVE A<br/>GOOD <em>IDEA?</em></h2><p>Let's turn it into something people can actually use.</p><div className="contact-actions"><a href="mailto:rajaravikumarb@gmail.com" className="orange-btn">EMAIL ME <Mail size={14}/></a><a href="https://wa.me/918124262289" target="_blank" rel="noreferrer" className="whatsapp-btn"><MessageCircle size={15}/> WHATSAPP CHAT</a></div><small className="whatsapp-note">Chat directly on WhatsApp: +91 81242 62289.</small></div></section>
   <footer className="footer shell"><span>© 2026 B RAJARAVIKUMAR</span><span>RB · DIGITAL PRODUCT BUILDER</span></footer>
  </main>
 }
