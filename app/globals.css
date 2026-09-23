@@ -229,3 +229,19 @@ body{background:radial-gradient(circle at 88% 8%,rgba(255,87,59,.06),transparent
   .hepra-hero .store-hero-copy b{font-size:16px}
   .hepra-hero .phone{width:72px;height:145px}
 }
+
+
+/* V4 — premium infinite skills marquee */
+.marquee{position:relative;overflow:hidden;padding:0;background:#ebe5d8;border-block:1px solid var(--line);height:58px;display:flex;align-items:center;white-space:nowrap}
+.marquee:before,.marquee:after{content:"";position:absolute;top:0;bottom:0;width:110px;z-index:3;pointer-events:none}
+.marquee:before{left:0;background:linear-gradient(90deg,#ebe5d8 18%,transparent)}
+.marquee:after{right:0;background:linear-gradient(270deg,#ebe5d8 18%,transparent)}
+.marquee div{display:flex;width:max-content;align-items:center;gap:0;animation:skillsMarquee 24s linear infinite;will-change:transform}
+.marquee div:after{content:"SAAS ✦ AI ✦ SHOPIFY ✦ WORDPRESS ✦ PHP ✦ PRODUCT DESIGN ✦ AUTOMATION ✦";padding-left:0}
+.marquee div{font:500 11px "DM Mono",monospace;letter-spacing:.12em;color:#303644}
+.marquee i{display:inline-block;color:var(--orange);font-style:normal;margin:0 18px;transform:scale(.8);animation:marqueeStar 1.6s ease-in-out infinite}
+@keyframes skillsMarquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@keyframes marqueeStar{0%,100%{transform:scale(.75) rotate(0deg);opacity:.65}50%{transform:scale(1.1) rotate(45deg);opacity:1}}
+.marquee:hover div{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.marquee div{animation:none}.marquee i{animation:none}}
+@media(max-width:760px){.marquee{height:52px}.marquee:before,.marquee:after{width:45px}.marquee div{font-size:9px;animation-duration:18s}.marquee i{margin:0 12px}}
