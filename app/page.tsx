@@ -25,7 +25,7 @@ export default function Home(){
  const[submitted,setSubmitted]=useState(false);
  useEffect(()=>{const onScroll=()=>{const max=document.documentElement.scrollHeight-window.innerHeight;setScrollProgress(max?window.scrollY/max*100:0);setShowTop(window.scrollY<80)};window.addEventListener("scroll",onScroll,{passive:true});onScroll();return()=>window.removeEventListener("scroll",onScroll)},[]);
  useEffect(()=>{if(!selected)return;const onKey=(e:KeyboardEvent)=>{if(e.key==="Escape")setSelected(null)};document.addEventListener("keydown",onKey);const prev=document.body.style.overflow;document.body.style.overflow="hidden";return()=>{document.removeEventListener("keydown",onKey);document.body.style.overflow=prev}},[selected]);
- useEffect(()=>{const ids=["work","pricing","about","services","process","contact"];const obs=new IntersectionObserver(entries=>{const hit=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(hit)setActive(hit.target.id)},{rootMargin:"-25% 0px -55% 0px",threshold:[.1,.25,.5]});ids.forEach(id=>{const el=document.getElementById(id);if(el)obs.observe(el)});return()=>obs.disconnect()},[]);
+ useEffect(()=>{const ids=["work","pricing","about","services","process","why","contact"];const obs=new IntersectionObserver(entries=>{const hit=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(hit)setActive(hit.target.id)},{rootMargin:"-25% 0px -55% 0px",threshold:[.1,.25,.5]});ids.forEach(id=>{const el=document.getElementById(id);if(el)obs.observe(el)});return()=>obs.disconnect()},[]);
  const sendWhatsApp=(e:React.FormEvent)=>{e.preventDefault();const text=encodeURIComponent(`Hi Roy, I want to start a project.
 
 Name: ${form.name}
