@@ -22,7 +22,7 @@ export default function Home(){
 
   <section id="top" className="hero shell">
    <div className="hero-copy"><div className="stamp">BUILDING DIGITAL PRODUCTS <span>●</span></div><motion.h1 initial={{opacity:0,y:18}} animate={{opacity:1,y:0}}>THE DIGITAL<br/>PRODUCT <strong>BUILDER.</strong></motion.h1><p>Full-stack developer, AI builder and product thinker. Turning ideas into sharp interfaces, useful software and production-ready systems.</p><div className="hero-bottom"><a className="orange-btn" href="#work">SEE THE WORK <ArrowUpRight size={15}/></a><span>CHENNAI · INDIA<br/>AVAILABLE FOR SELECT PROJECTS</span></div></div>
-   <div className="hero-stats"><div><b>04</b><span>CORE<br/>PROJECTS</span></div><div><b>12+</b><span>TOOLS &<br/>FRAMEWORKS</span></div><div><b>∞</b><span>IDEAS<br/>TO SHIP</span></div></div>
+   <div className="hero-visual"><div className="portrait-ring"><img src="/profile.jpg" alt="B Rajaravikumar — Digital Product Builder" /><span className="portrait-mark">RB · BUILD / SHIP</span></div><div className="hero-stats"><div><b>372+</b><span>PROJECTS<br/>COMPLETED</span></div><div><b>12+</b><span>TOOLS &<br/>FRAMEWORKS</span></div><div><b>∞</b><span>IDEAS<br/>TO SHIP</span></div></div></div>
   </section>
 
   <section className="marquee" aria-label="Skills ticker"><div>SAAS <i>✦</i> AI <i>✦</i> SHOPIFY <i>✦</i> WORDPRESS <i>✦</i> PHP <i>✦</i> PRODUCT DESIGN <i>✦</i> AUTOMATION <i>✦</i></div></section>
