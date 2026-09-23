@@ -292,3 +292,17 @@ body{background:radial-gradient(circle at 88% 8%,rgba(255,87,59,.06),transparent
 .about-story b{font-weight:600}
 .about-story strong{color:var(--ink);font-weight:600}
 @media(max-width:760px){.about-story{padding-left:14px;margin:20px 0 24px}.about-story p{font-size:12px;line-height:1.7}.about-story p:first-child{font-size:14px}}
+
+
+/* V5 — SEO/GEO-friendly FAQ presentation */
+.faq-section{background:#eee7d9}
+.faq-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+.faq-grid article{padding:24px 25px 25px 0;border-bottom:1px solid var(--line);margin-right:25px}
+.faq-grid article:nth-child(even){border-left:1px solid var(--line);padding-left:25px;margin-right:0}
+.faq-grid h3{font-size:19px;line-height:1.1;letter-spacing:-.03em;margin:0 0 12px}
+.faq-grid p{font-size:12px;line-height:1.7;color:#626760;margin:0;max-width:520px}
+@media(max-width:760px){
+ .faq-grid{grid-template-columns:1fr}
+ .faq-grid article,.faq-grid article:nth-child(even){border-left:0;margin-right:0;padding:20px 0}
+ .faq-grid article:first-child{padding-top:22px}
+}
