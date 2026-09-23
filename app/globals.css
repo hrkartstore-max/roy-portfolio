@@ -110,3 +110,72 @@ body{background:radial-gradient(circle at 88% 8%,rgba(255,87,59,.06),transparent
 @media(prefers-reduced-motion:reduce){
  .navlinks{transition:none}
 }
+
+
+/* HEPRA HERO — conversion-first banner */
+.hepra-hero{min-height:690px;grid-template-columns:minmax(0,1.02fr) minmax(390px,.98fr);align-items:center;gap:30px;padding:68px 0 60px;position:relative;overflow:visible}
+.hepra-hero .hero-copy{max-width:650px}
+.hepra-hero .stamp{font-size:9px;margin-bottom:4px}
+.hepra-hero h1{font-size:clamp(58px,7.2vw,96px);line-height:.88;letter-spacing:-.07em;margin:25px 0 24px}
+.hepra-hero h1 strong{color:var(--orange);font-weight:700}
+.hepra-hero h1>span{display:inline-block;color:var(--ink);font-weight:700}
+.hepra-hero .hero-copy>p{font-size:16px;line-height:1.6;max-width:570px;color:#424958;margin:0}
+.hero-benefits{display:flex;flex-wrap:wrap;gap:9px 18px;margin:22px 0 27px}
+.hero-benefits span{font:500 9px "DM Mono",monospace;letter-spacing:.03em;color:#343a46}
+.hero-benefits span:first-child{color:var(--ink)}
+.hepra-hero .hero-bottom{margin-top:0;gap:20px;flex-wrap:wrap}
+.hero-secondary{display:inline-flex;align-items:center;gap:7px;color:var(--ink);font:500 9px "DM Mono",monospace;letter-spacing:.08em;text-decoration:none;border-bottom:1px solid var(--ink);padding:8px 0}
+.hero-secondary:hover{color:var(--orange);border-color:var(--orange)}
+.hero-trust{margin-top:23px;font:9px "DM Mono",monospace;color:#777064;letter-spacing:.02em}
+.hero-trust i{font-style:normal;color:var(--orange);padding:0 6px}
+.hero-visual{position:relative;min-height:430px;display:flex;align-items:center;justify-content:center}
+.hero-visual:before{content:"";position:absolute;width:390px;height:390px;border-radius:50%;background:#e8e0d1;right:5px;top:18px}
+.store-device{position:absolute;background:#151a28;border:1px solid #0b1020;box-shadow:9px 10px 0 #c9c1b3;border-radius:8px;z-index:2}
+.laptop{width:min(450px,100%);height:285px;right:0;top:58px;padding:13px 13px 17px}
+.laptop:after{content:"";position:absolute;left:-7%;right:-7%;bottom:-12px;height:9px;background:#c5bcad;border:1px solid #9f978a;border-radius:2px}
+.device-top{height:11px;display:flex;gap:4px;align-items:center;margin-bottom:8px}
+.device-top i{width:5px;height:5px;border-radius:50%;background:#737b88}
+.store-screen{height:100%;background:#faf7ef;overflow:hidden;border-radius:3px;color:#111725}
+.store-nav{height:30px;border-bottom:1px solid #11172518;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:0 12px;font:6px "DM Mono",monospace}
+.store-nav b{font-size:9px;letter-spacing:.08em}
+.store-nav span{justify-self:center;color:#5f6670}
+.store-nav strong{font-size:8px}
+.store-hero-copy{padding:27px 25px 14px;display:flex;flex-direction:column;align-items:flex-start}
+.store-hero-copy small{font:6px "DM Mono",monospace;color:#7b7469}
+.store-hero-copy b{font-size:27px;line-height:.9;letter-spacing:-.06em;margin:9px 0 13px}
+.store-hero-copy span{font:6px "DM Mono",monospace;background:var(--orange);color:white;padding:6px 8px}
+.store-products{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:0 25px}
+.store-products i{height:68px;background:#e8e0d2;border:1px solid #1117250e}
+.store-products i:nth-child(2){background:#d9e0d4}
+.store-products i:nth-child(3){background:#e2d8cc}
+.phone{width:126px;height:250px;right:-8px;bottom:7px;padding:7px;border-radius:17px;z-index:4;box-shadow:7px 8px 0 #c0b7a8}
+.phone-notch{position:absolute;z-index:2;left:50%;top:9px;transform:translateX(-50%);width:42px;height:10px;border-radius:8px;background:#0b1020}
+.phone-screen{height:100%;background:#f8f3e8;border-radius:12px;overflow:hidden;padding:29px 12px 10px;display:flex;flex-direction:column;color:#111725}
+.phone-screen>b{font:7px "DM Mono",monospace;letter-spacing:.1em}
+.phone-screen small{font:5px "DM Mono",monospace;color:#777;margin-top:17px}
+.phone-screen strong{font-size:24px;line-height:.82;letter-spacing:-.06em;margin:8px 0}
+.phone-screen>span{font:5px "DM Mono",monospace;background:var(--orange);color:#fff;padding:5px 6px;align-self:flex-start}
+.phone-card{margin-top:auto;height:58px;background:#ddd4c6}
+.hero-note{position:absolute;z-index:5;background:#111725;color:white;padding:7px 9px;font:500 8px "DM Mono",monospace;letter-spacing:.08em;box-shadow:3px 3px 0 var(--orange)}
+.note-one{left:8px;top:82px;transform:rotate(-4deg)}
+.note-two{right:-1px;top:31px;transform:rotate(4deg)}
+.hero-stat-card{position:absolute;left:0;bottom:5px;background:#fffaf1;border:1px solid #bdb4a6;padding:13px 16px;display:flex;align-items:center;gap:12px;z-index:5;box-shadow:5px 5px 0 #c8c0b2}
+.hero-stat-card b{font-size:27px;letter-spacing:-.06em;color:var(--orange)}
+.hero-stat-card span{font:7px/1.35 "DM Mono",monospace;color:#666}
+.hepra-hero .hero-stats{display:none}
+@media(max-width:900px){.hepRA-hero{} .hepRA-hero{grid-template-columns:1fr}.hepRA-hero .hero-visual{min-height:390px}.hepRA-hero .hero-copy{max-width:760px}}
+@media(max-width:760px){
+ .hepRA-hero{grid-template-columns:1fr;min-height:auto;padding:52px 0 46px;gap:34px}
+ .hepRA-hero h1{font-size:52px}
+ .hepRA-hero .hero-copy>p{font-size:14px}
+ .hero-benefits{display:grid;grid-template-columns:1fr;gap:9px;margin:19px 0 24px}
+ .hero-visual{min-height:335px}
+ .hero-visual:before{width:290px;height:290px;right:-20px;top:20px}
+ .laptop{width:calc(100% - 34px);height:205px;right:8px;top:40px}
+ .store-hero-copy{padding:20px 18px 10px}.store-hero-copy b{font-size:21px}.store-products{padding:0 18px}.store-products i{height:47px}
+ .phone{width:92px;height:185px;right:0;bottom:0;border-radius:13px}
+ .phone-screen{border-radius:9px;padding:23px 8px 8px}.phone-notch{width:30px;height:7px;top:7px}.phone-screen strong{font-size:18px}.phone-card{height:42px}
+ .hero-note{font-size:7px}.note-one{left:-1px;top:58px}.note-two{right:4px;top:17px}
+ .hero-stat-card{left:0;bottom:-3px;padding:9px 11px}.hero-stat-card b{font-size:21px}
+}
+@media(max-width:420px){.hepRA-hero h1{font-size:45px}.hero-visual{min-height:300px}.laptop{height:180px}.phone{width:82px;height:165px}}
