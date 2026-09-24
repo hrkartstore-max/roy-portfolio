@@ -125,15 +125,15 @@ Details: ${form.message}`);window.open("https://wa.me/918124262289?text="+text,"
    <div className="section-head"><div><small>05 — WHAT YOU GET</small><h2>EVERYTHING TO<br/><em>SELL ONLINE.</em></h2></div><span>BUILT FOR REAL BUSINESSES</span></div>
    <p className="feature-intro">A professional online store should give a business everything needed to sell, accept payments, manage orders and grow — without unnecessary technical complexity.</p>
    <div className="feature-grid">
-    <article><b>01</b><h3>ECOMMERCE WEBSITE</h3><p>A professional storefront with your brand, products, collections and conversion-focused shopping experience.</p></article>
-    <article><b>02</b><h3>PAYMENT READY</h3><p>Set up the storefront flow for online payments and connect the payment provider that fits the business.</p></article>
-    <article><b>03</b><h3>MOBILE-FIRST DESIGN</h3><p>Responsive shopping experiences designed for customers browsing and buying from their phones.</p></article>
-    <article><b>04</b><h3>PRODUCT MANAGEMENT</h3><p>Organize products, collections, variants, pricing and content so the store stays easy to manage.</p></article>
-    <article><b>05</b><h3>ORDERS &amp; WORKFLOW</h3><p>Clear customer journeys from product discovery to cart, checkout and order management.</p></article>
-    <article><b>06</b><h3>DELIVERY READY</h3><p>Build the storefront around the delivery and order-tracking workflow used by the business.</p></article>
-    <article><b>07</b><h3>SEO-READY STRUCTURE</h3><p>Clean page structure, useful content and technical foundations that make the site easier for search engines to understand.</p></article>
-    <article><b>08</b><h3>DIRECT SUPPORT</h3><p>Clear communication during the project with practical guidance instead of unnecessary technical jargon.</p></article>
-    <article><b>09</b><h3>BUILT FOR GROWTH</h3><p>Start with what the business needs today and leave room for new products, features, automation and integrations.</p></article>
+    <article><img src="/features/storefront.svg" alt="Ecommerce storefront preview" loading="lazy"/><b>01</b><h3>ECOMMERCE WEBSITE</h3><p>A professional storefront with your brand, products, collections and conversion-focused shopping experience.</p></article>
+    <article><img src="/features/payments.svg" alt="Online payment interface preview" loading="lazy"/><b>02</b><h3>PAYMENT READY</h3><p>Set up the storefront flow for online payments and connect the payment provider that fits the business.</p></article>
+    <article><img src="/features/mobile.svg" alt="Mobile ecommerce shopping preview" loading="lazy"/><b>03</b><h3>MOBILE-FIRST DESIGN</h3><p>Responsive shopping experiences designed for customers browsing and buying from their phones.</p></article>
+    <article><img src="/features/products.svg" alt="Product management preview" loading="lazy"/><b>04</b><h3>PRODUCT MANAGEMENT</h3><p>Organize products, collections, variants, pricing and content so the store stays easy to manage.</p></article>
+    <article><img src="/features/orders.svg" alt="Orders dashboard preview" loading="lazy"/><b>05</b><h3>ORDERS &amp; WORKFLOW</h3><p>Clear customer journeys from product discovery to cart, checkout and order management.</p></article>
+    <article><img src="/features/delivery.svg" alt="Delivery workflow preview" loading="lazy"/><b>06</b><h3>DELIVERY READY</h3><p>Build the storefront around the delivery and order-tracking workflow used by the business.</p></article>
+    <article><img src="/features/seo.svg" alt="Search optimization preview" loading="lazy"/><b>07</b><h3>SEO-READY STRUCTURE</h3><p>Clean page structure, useful content and technical foundations that make the site easier for search engines to understand.</p></article>
+    <article><img src="/features/support.svg" alt="Customer support conversation preview" loading="lazy"/><b>08</b><h3>DIRECT SUPPORT</h3><p>Clear communication during the project with practical guidance instead of unnecessary technical jargon.</p></article>
+    <article><img src="/features/growth.svg" alt="Business growth analytics preview" loading="lazy"/><b>09</b><h3>BUILT FOR GROWTH</h3><p>Start with what the business needs today and leave room for new products, features, automation and integrations.</p></article>
    </div>
    <a className="feature-cta" href="#pricing">VIEW PRICING PLANS <ArrowUpRight size={14}/></a>
   </section>
