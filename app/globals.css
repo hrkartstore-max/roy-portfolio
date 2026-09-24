@@ -306,3 +306,24 @@ body{background:radial-gradient(circle at 88% 8%,rgba(255,87,59,.06),transparent
  .faq-grid article,.faq-grid article:nth-child(even){border-left:0;margin-right:0;padding:20px 0}
  .faq-grid article:first-child{padding-top:22px}
 }
+
+
+/* V5 — ecommerce feature / what-you-get section */
+.what-you-get{background:#eee7d9}
+.feature-intro{max-width:650px;font-size:14px;line-height:1.7;color:#626760;margin:-15px 0 30px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.feature-grid article{min-height:185px;padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;background:#f3ede1;transition:transform .2s,background .2s}
+.feature-grid article:hover{transform:translateY(-3px);background:#f8f2e8}
+.feature-grid article>b{font:8px "DM Mono",monospace;color:var(--orange)}
+.feature-grid h3{font-size:15px;letter-spacing:-.02em;margin:30px 0 10px}
+.feature-grid p{font-size:11px;line-height:1.65;color:#6b6d68;margin:0;max-width:280px}
+.feature-cta{display:inline-flex;align-items:center;gap:8px;margin-top:25px;border:1px solid var(--ink);padding:11px 15px;text-decoration:none;color:var(--ink);font:9px "DM Mono",monospace;letter-spacing:.06em}
+.feature-cta:hover{background:var(--ink);color:#fff}
+@media(max-width:900px){.feature-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){
+ .feature-intro{font-size:13px;margin:-5px 0 22px}
+ .feature-grid{grid-template-columns:1fr}
+ .feature-grid article{min-height:150px;padding:18px}
+ .feature-grid h3{margin:22px 0 8px;font-size:14px}
+ .feature-grid p{font-size:11px}
+}
